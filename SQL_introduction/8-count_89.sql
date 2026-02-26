@@ -1,0 +1,1 @@
+-- script to list all databses 
