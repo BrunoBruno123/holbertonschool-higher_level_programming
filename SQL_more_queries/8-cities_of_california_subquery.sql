@@ -1,11 +1,2 @@
 -- script to list all databses
-USE hbtn_0d_usa;
-
-SELECT *
-FROM cities
-WHERE state_id IN (
-    SELECT id
-    FROM states
-    WHERE name = 'California'
-)
-ORDER BY id ASC;
+SELECT * FROM cities WHERE state_id = ( SELECT id FROM states WHERE name = 'California') ORDER BY id ASC;
